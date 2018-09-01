@@ -1,0 +1,10 @@
+.
+*desktop.ini
+*.ini
+.project
+.settings
+Lib
+/**/*.log
+
+
+
