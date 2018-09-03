@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+function add(a,b)
+{
+	return a+b;
+}
+
+console.log(add(2,3));
+console.log(add(3,4));
+console.log(add(4,5));
+
+var a=4;
+var c = ["hello", "world", 4, 5];
+console.log(c[0]);
+for(var i=0; i<4; i++)
+	{
+		console.log(c[i]);
+	}

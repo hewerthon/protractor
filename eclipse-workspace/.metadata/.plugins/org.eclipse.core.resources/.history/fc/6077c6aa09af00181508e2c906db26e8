@@ -1,0 +1,47 @@
+/**
+First parameter - test suite name
+Second parameter - function (function will have all tests (it blocks)
+*/
+describe('Protractor Alerts steps',function()
+{
+	it('Open NonAngular js website',function()
+	{
+		browser.waitForAngularEnabled(false);
+		browser.get('http://qaclickacademy.com/practice.php');
+		
+		element(by.id("confirmbtn")).click();
+		browser.switchTo().alert().accept().then(function(){
+			browser.sleep(5000);
+		});
+		
+		browser.switchTo().alert().dismiss().then(function(){
+			browser.sleep(5000);
+		});
+		
+		element(by.model('userInputQuery')).sendKeys("river");
+		browser.actions().mouseMove(element(by.model("locationQuery")).sendKeys("London")).perform();
+		browser.actions().sendKeys(protractor.Key.ARROW_DOWN).perform();
+	    browser.actions().sendKeys(protractor.Key.ENTER).perform().then(function()
+	    {
+			browser.sleep(3000);
+			expect(element.all(by.css("div[ng-mouseover*='onSearchResultOver']")).count()).toEqual(7);
+			element.all(by.css("div[ng-mouseover*='onSearchResultOver']")).get(0).click();
+			element(by.css("a[ng-href*='London/River Island'")).click().then(function()
+			{
+				browser.getAllWindowHandles().then(function(handles)
+				{
+					browser.switchTo().window(handles[1]);
+					browser.getTitle().then(function(title){
+						console.log(title + " title of the page after switching");
+					})
+				});
+				browser.sleep(5000);
+			});
+		});
+			    
+	});
+	// code to close browser
+	it('close browswer', function() {
+	});
+});
+		

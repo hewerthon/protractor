@@ -1,16 +1,16 @@
-/**
- * 
- */
 exports.config = {
+  framework: 'jasmine',
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['spec1.js'],
-  multiCapabilities: [{
-    browserName: 'chrome',
-    chromeOptions: {
-        args: [
-            'no-sandbox',
-            '--disable-web-security'
-        ]
-    }
-  }]
-};
+  specs: ['Registration.js'],
+  capabilities: 
+  {
+	    //browserName: 'firefox',
+	  	//browserName: 'internet explorer',  
+	  	browserName: 'chrome',
+	    chromeOptions: 
+	    {
+	        args:["--disable-gpu", "--disable-popup-blocking", "--window-size=1520,820"]
+	    }
+			//"--headless", 
+  }
+}
