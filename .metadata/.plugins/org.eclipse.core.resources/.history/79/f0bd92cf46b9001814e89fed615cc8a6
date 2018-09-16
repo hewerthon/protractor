@@ -1,0 +1,39 @@
+/**
+ * 
+First parameter - test suite name
+Second parameter - function (function will have all tests (it blocks)
+*/
+describe('Protractor baby steps',function()
+		{
+			var obj = require("./Jsobject.js")
+			var d = require("./Data.js")
+			
+			beforeEach(function(){
+				obj.getURL();
+			});
+			
+			it('Open Angular js website',function(){
+				
+				
+				// write yout raw protractor code
+			    obj.firstinput.sendKeys(d.datadrive.firstinput);
+			    obj.secondinput.sendKeys(d.datadrive.secondinput);
+
+			    obj.goButton.click();
+
+			    expect(obj.result.getText()).toEqual(d.datadrive.result); 
+			    obj.result.getText().then(function(text){
+				    console.log(text);	
+				})
+			})
+			
+			afterEach(function(){
+				console.log("Test is completed");
+			});
+
+			it('close browswer', function() {
+			// code to close browser
+				
+			})
+		})
+		
