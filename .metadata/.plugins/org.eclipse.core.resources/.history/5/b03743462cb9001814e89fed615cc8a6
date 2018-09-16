@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+
+function Car()
+{
+	this.firstinput=element(by.model('first'));
+	this.secondinput=element(by.model('second'));
+	this.goButton=element(by.id('gobutton'));
+	this.result=element(by.binding('latest'));
+	this.color="red";
+	this.engine="turbo";
+	this.brand="BMW";
+	this.search="by.css('input')";
+	
+	this.getModel=function(){
+		
+		console.log("this is 2020 model");
+	};
+};
+
+	module.exports = new Car();
+	//a.getModel();
+	//console.log(a.engine);
+
