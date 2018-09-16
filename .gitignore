@@ -2,5 +2,6 @@
 /**/*desktop.ini
 /**/*.ini
 *.log
-ProtractorTutorial/node_modules
-ProtractorTutorial/target
+/node_modules
+/target
+/.metadata/
