@@ -1,0 +1,4 @@
+/**
+ * 
+ */
+require("./Jsobject.js")
