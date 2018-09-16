@@ -1,5 +1,0 @@
-/**
- * 
- */
-var obj = require("./Jsobject.js")
-
