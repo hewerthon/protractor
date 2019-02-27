@@ -1,6 +1,10 @@
 # protractor
 
-Comandos para projeto Protractor
+Comandos para projeto Testes Automatizados com Protractor
+
+Esse modelo é para ser utilizados em diversos projetos
+
+# requeriments
 
 npm install -g protractor
 

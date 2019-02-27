@@ -5,9 +5,9 @@ Second parameter - function (function will have all tests (it blocks)
 */
 describe('Protractor baby steps',function()
 		{
-			var obj = require("./Jsobject.js")
+			var obj = require("./Objects/Jsobject.js/index.js")
 			var using = require('jasmine-data-provider');
-			var d = require("./Data1.js");
+			var d = require("../Datas/Data1.js");
 			
 			
 			beforeEach(function(){
